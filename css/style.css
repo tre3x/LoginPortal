@@ -1,0 +1,190 @@
+body {
+    background: linear-gradient( #23a6d5, #333);
+ 
+    background : url('../images/consite.jpg');
+    background-size: cover;
+    height: 100%;
+}
+.outer-container {
+  position: relative;
+}
+#particles-js{
+  height: 100vh;
+}
+
+
+button {
+    border: none;
+    width: 164px;
+    height: 51px;
+    margin: auto;
+    margin-top: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    background: #333;
+    font-size: 15px;
+    color: #fff;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s; }
+    button i {
+      margin-left: 10px;
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0); }
+    button:hover i, button:focus i, button:active i {
+      -webkit-animation-name: hvr-icon-wobble-horizontal;
+      animation-name: hvr-icon-wobble-horizontal;
+      -webkit-animation-duration: 1s;
+      animation-duration: 1s;
+      -webkit-animation-timing-function: ease-in-out;
+      animation-timing-function: ease-in-out;
+      -webkit-animation-iteration-count: 1;
+      animation-iteration-count: 1; }
+  
+  @-webkit-keyframes hvr-icon-wobble-horizontal {
+    16.65% {
+      -webkit-transform: translateX(6px);
+      transform: translateX(6px); }
+    33.3% {
+      -webkit-transform: translateX(-5px);
+      transform: translateX(-5px); }
+    49.95% {
+      -webkit-transform: translateX(4px);
+      transform: translateX(4px); }
+    66.6% {
+      -webkit-transform: translateX(-2px);
+      transform: translateX(-2px); }
+    83.25% {
+      -webkit-transform: translateX(1px);
+      transform: translateX(1px); }
+    100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0); } }
+  @keyframes hvr-icon-wobble-horizontal {
+    16.65% {
+      -webkit-transform: translateX(6px);
+      transform: translateX(6px); }
+    33.3% {
+      -webkit-transform: translateX(-5px);
+      transform: translateX(-5px); }
+    49.95% {
+      -webkit-transform: translateX(4px);
+      transform: translateX(4px); }
+    66.6% {
+      -webkit-transform: translateX(-2px);
+      transform: translateX(-2px); }
+    83.25% {
+      -webkit-transform: translateX(1px);
+      transform: translateX(1px); }
+    100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0); } }
+  @media (max-width: 1199px) {
+    .wrapper {
+      background-position: right center; } }
+  @media (max-width: 991px) {
+    .inner form {
+      padding-top: 10px;
+      padding-left: 30px;
+      padding-right: 30px; } }
+  @media (max-width: 767px) {
+    .inner {
+      display: block; }
+      .inner .image-holder {
+        width: 100%; }
+      .inner form {
+        width: 100%;
+        padding: 40px 0 30px; }
+      }
+
+      nav {
+        padding: 24px;
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+
+      }
+
+      nav a {
+        transition: 0.3s ease;
+
+        
+        font-size: 20px;
+        text-decoration: none;
+        border-top: 4px solid transparent;
+        border-bottom: 4px solid transparent;
+        font-size: 17px;
+      }
+      nav a:hover {
+        border-top: 3px solid white;
+        border-bottom: 3px solid white;
+        padding: 6px 0; 
+      }
+      table, td {
+        border: 1px solid black;
+    
+      }
+
+      tr{
+        text-align: center;
+      }
+
+      tr img{
+        border-radius: 20%;
+        max-width: 40%;
+        max-height: 40%;
+        margin-left: 10px;
+      }
+
+
+      .carousel-item {
+        width: 100%;
+        color: black;
+      }
+      .carousel-inner{
+        width:100%;
+        max-height: 200px !important;
+        color: black;
+      }
+
+      .carousel-control-prev-icon,
+      .carousel-control-next-icon {
+
+        bottom: 0%;
+        outline: black;
+        background-size: 100%, 100%;
+        border-radius: 50%;
+        border: 1px solid black;
+        background-image: none;
+      }
+
+      .carousel-control-next-icon:after
+      {
+       
+        font-size: 55px;
+        color: black;
+      }
+
+      .carousel-control-prev-icon:after {
+        
+        font-size: 55px;
+        color: black;
+      }
+
+       #newicon{
+        animation-name: newicon;
+        animation-iteration-count: infinite;
+        animation-duration: 2s;
+      }
+      @keyframes newicon {
+        0% {opacity: 0;}
+        50% {opacity: 1;}
+        100% {opacity: 0;}
+      }
+
+      
+      
+  

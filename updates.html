@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Updates</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link rel="stylesheet" href="css/material-design-iconic-font/css/material-design-iconic-font.min.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+        <!--FireBase Dependencies -->
+        <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-storage.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
+
+        <!--Local CSSS-->
+        <link rel="stylesheet" href="css/style.css">
+
+        <!--Boostrap-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    </head>
+
+    <body>
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+              <ul class="navbar-nav">
+                <a href="MainPage.html" style="color: white; margin-left: 20px;margin-top: 5px;">Home</a>
+                <a  href="updates.html" style="color: white;  margin-left: 20px;margin-top: 5px;" ><p>Updates</p></a>
+                <a href="discussion.html" style="color: white;  margin-left: 20px;margin-top: 5px;"><p>Discussion</p></a>
+                <a href="MemberDirectory.html" style="color: white;  margin-left: 20px;margin-top: 5px;"><p>Member Directory</p></a>
+                <a  href="jobposting.html" style="color: white;  margin-left: 20px;margin-top: 5px;"><p>Job/Internship/Training Posting</p></a>
+              </ul>
+
+              <ul class="navbar-nav ml-auto">
+                <button id="btn-logout" type="button">Log Out
+                    <i class="zmdi zmdi-arrow-right"></i>
+                </button>
+              </ul>
+            </div>
+          </nav>
+
+        <div class="container" style="background: white; margin-top: 60px; margin-bottom: 60px; border-radius: 10px; ">
+                <h1>UPDATES : </h1>
+                <div class="updatesbox" style="overflow:scroll; height: 600px;overflow-x:hidden;">
+                    <ul>
+
+                        <p style="margin-top:20px;">May/18/2020 <img src ="images/newicon.png" id = "newicon" style= "max-height: 30px;max-width: 30px;"></p>
+
+                          <li style="margin-top:-20px; margin-bottom : 20px;"> Official Facebook page of SM&PR Group launched.</li>
+                        <li style="margin-top:-5px; margin-bottom : 20px;"> Official Facebook page of Department of Construction Engineering launched.</li>
+
+                        <p style="margin-top:20px;">May/15/2020</p>
+
+                          <li style="margin-top:-20px;"> Official approval of HOD was given regarding structure of SM&PR Group was granted. </li>
+
+                          <li style="margin-top:-5px;"> Launch of linkedin page of SM&PR group. </li>
+
+                          <li style="margin-top:-5px;"> Official teaser of SM&PR group was launched.</li>
+
+                         <p style="margin-top:20px;">May/12/2020</p>
+
+                          <li style="margin-top:-20px; margin-bottom : 20px;"> Official logo of SM&PR Group created. </li>
+
+                         <p sttyle="margin-top:20px;">April/25/2020</p>
+
+                          <li style="margin-top:-20px;"> Official department website and alumni profile login work started. </li>
+
+                         <p style="margin-top:20px;">April/22/2020</p>
+
+                           <li style="margin-top:-20px;"> Appoinment of batch coordinator started. </li>
+
+                        <p style="margin-top:20px;">April/18/2020</p>
+
+                          <li style="margin-top:-20px;">Alumni web connect whatsapp group was created to connect with alumni 1993-2010. </li>
+
+                          <li style="margin-top:-5px;"> First official mail regarding the establishment of SM&PR Group was send to alumni of the department from 1993-2010 batch. </li>
+
+                         <p style="margin-top:20px;">April /17/2020
+
+                          <li style="margin-top:-20px;"> Official approval of SM&PR Group was given by HOD. </li>
+
+                        <p style="margin-top:20px;">April/13/2020</p>
+
+                        <li style="margin-top:-20px;">Official linkedin page of the department was created. </li>
+                    </ul>
+                    </div>
+
+
+
+        </div>
+
+
+
+        </div>
+
+        <footer id="sticky-footer" class="py-4 bg-dark text-white-50" >
+          <div class="container text-center">
+              <p style="font-size:1.85rem">Brought to you by SM&PR Group</p>
+              <p style="font-size:1.15rem">Managed by Web Development Team, SM&PR Group</p>
+          </div>
+      </footer>
+
+        <script>
+          firebase.auth().onAuthStateChanged(function(user){
+              if(!user)
+              {
+                  window.location.href = "index.html";
+              }
+          });
+      </script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" integrity="sha256-qM7QTJSlvtPSxVRjVWNM2OfTAz/3k5ovHOKmKXuYMO4=" crossorigin="anonymous"></script>
+
+
+        <script src="js/index.js"></script>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </body>
+</html>

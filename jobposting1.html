@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="design_files/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+        <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-storage.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
+                
+        <link rel="stylesheet" href="design_files/css/style1.css">
+    </head>
+
+    <body>
+        <div class="topnav" id="myTopnav">
+            <a href="MainPage.html">Home</a>
+            <a  href="updates.html" ><p>Updates</p></a>
+            <a href="discussion.html"><p>Discussion</p></a>
+            <a href="MemberDirectory.html"><p>Member Directory</p></a>
+            <a  href="jobposting.html"><p>Job Posting</p></a>
+            <a id="btn-intern" href="addjobs.html"><p>Add Job/Internship/Training</p></a>
+            <button id="btn-logout" type="button">Log Out
+                    <i class="zmdi zmdi-arrow-right"></i>
+            </button> 
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+            </a>
+          </div>
+        <div class="wrapper" style="background-image: url('design_files/images/registerback.jpg')">
+                
+            
+            <div class="searchbox">
+                <div class="displaybox" style="width:auto;height:500px;line-height:3em;overflow:scroll;padding:5px;">
+                    <table id ="dispbox">
+                        <tr>
+                            <td>Date Uploaded(In IST)</td>
+                            <td>Organisation</td>
+                            <td>Employment Type</td>
+                            <td>Designation</td>      
+                            <td>Contact Person</td>   
+                            <td>Contact Number</td> 
+                            <td>Mail ID</td> 
+                            <td>Location</td> 
+                            <td>Preferred Time For Calling</td>                                    
+                        </tr>
+                    </table>
+                </div>
+                <button id="btn-show" type="button">Show
+                    <i class="zmdi zmdi-arrow-right"></i>
+                </button> 
+            </div>
+            
+        </div>
+
+
+        <script src = "js/index.js"></script>
+        <script>
+            firebase.auth().onAuthStateChanged(function(user){
+                if(!user)
+                {
+                    window.location.href = "index.html";
+                }
+            });
+        </script>
+    </body>
+</html>
