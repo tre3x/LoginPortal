@@ -158,7 +158,8 @@ var firebaseConfig = {
                 });
             });
         }else{
-            var imageuserRef = usersRef.child("zimageurl");
+            
+            /*var imageuserRef = usersRef.child("zimageurl");
             blankurl = " ";
             imageuserRef.set(blankurl, function(error){
                 if(error){
@@ -170,7 +171,9 @@ var firebaseConfig = {
                 }else{
                     window.location.href = "MainPage.html";
                 }
-            });
+            });*/
+
+            window.alert("Fill up all fields.");
 
        
 
