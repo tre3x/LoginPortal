@@ -18,7 +18,6 @@ var firebaseConfig = {
   $('#btn-login').click(function(){
       var email = $('#email').val();
       var password = $('#password').val();
-      
 
       if(email != "" && password != ""){
         var result = firebase.auth().signInWithEmailAndPassword(email, password);
@@ -50,25 +49,26 @@ var firebaseConfig = {
         }
     });
 
-    
+
   });
 
-  
+
 
   $("#btn-update").click(function(){
     var FirstName = $('#FirstName').val();
     var LastName = $('#SecondName').val();
     var yearofpass = $('#yearofpass').val();
     var phnnumber = $('#phnnumber').val();
+    var dob = $('#dob').val();
     var presentorg = $('#presentorg').val();
     var desig = $('#desig').val();
     var furtheredu = $('#furtheredu').val();
     var newpass = $('#newpass').val();
     var file = $('#image').prop('files');
-    
+    //console.log(dob+"k");
+
     var blob = new Blob(file, { type: "image/jpeg/png/jpg" });
-    
-    
+
 
     var email = firebase.auth().currentUser && firebase.auth().currentUser.email;
 
@@ -77,16 +77,15 @@ var firebaseConfig = {
     var usersRef = rootRef.child(userID);
 
     const storageRef = firebase.storage().ref();
-    
-    
+
 
     console.log("before triggered");
-    
-    if(FirstName!= ""  && LastName!= "" && presentorg != "" && desig != "" && phnnumber != "" && yearofpass !="" && newpass!=""){
+
+    if(FirstName!= ""  && LastName!= "" && presentorg != "" && desig != "" && phnnumber != "" && yearofpass !="" && newpass!="" && dob!=""){
 
         var imgurl;
         //const metadata = { contentType: 'image/jpeg' }; // or whatever you want
-        
+
         firebase.auth().currentUser.updatePassword(newpass).then(function() {
             console.log("success");
           }).catch(function(error) {
@@ -96,8 +95,7 @@ var firebaseConfig = {
             console.log(errorCode);
             console.log("Message : "+ errorMessage);
           });
-          
-        
+
 
         var userData= {
             "First Name":FirstName,
@@ -108,11 +106,12 @@ var firebaseConfig = {
             "Present Organisation": presentorg,
             "Designation": desig,
             "Further Education": furtheredu,
-            "zzNew Password": newpass
+            "zzNew Password": newpass,
+            "zzzDOB": dob
 
-            
+
         };
-        
+
 
         usersRef.set(userData, function(error){
             if(error){
@@ -120,14 +119,14 @@ var firebaseConfig = {
                 var errorMessage = error.message;
                 console.log(errorCode);
                 window.alert("Message : "+ errorMessage);
-                
+
             }
-        }); 
+        });
 
         if(blob.size != 0){
             var filename = new Date().getTime();
             const uploadTask = storageRef.child(`images/${filename}`).put(blob);
-            
+
             uploadTask.on(firebase.storage.TaskEvent.STATE_CHANGED, snapshot => {
                 const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
                 switch (snapshot.state) {
@@ -149,16 +148,16 @@ var firebaseConfig = {
                             var errorMessage = error.message;
                             console.log(errorCode);
                             window.alert("Message : "+ errorMessage);
-                            
+
                         }else{
                             window.location.href = "MainPage.html";
                         }
                     });
-                    
+
                 });
             });
         }else{
-            
+
             /*var imageuserRef = usersRef.child("zimageurl");
             blankurl = " ";
             imageuserRef.set(blankurl, function(error){
@@ -167,7 +166,7 @@ var firebaseConfig = {
                     var errorMessage = error.message;
                     console.log(errorCode);
                     window.alert("Message : "+ errorMessage);
-                    
+
                 }else{
                     window.location.href = "MainPage.html";
                 }
@@ -175,13 +174,13 @@ var firebaseConfig = {
 
             window.alert("Fill up all fields.");
 
-       
+
 
     }} else{
         window.alert("Fill up all fields.");
     }
   });
-  
+
 
   $("#btn-logout").click(function(){
     firebase.auth().signOut();
@@ -205,12 +204,11 @@ var firebaseConfig = {
             for(key in data) {
                 if(data.hasOwnProperty(key)) {
                     var value = data[key];
-                    
+
                     nameyear =[Object.values(value)[2],Object.values(value)[4],Object.values(value)[7],Object.values(value)[1],Object.values(value)[6], Object.values(value)[8]];
-            
-              
+
                     if(searchFirstName.toLowerCase() === nameyear[0].toLowerCase() && searchLastName === "" && searchyearofpass === ""){
-                        
+
                         var table = document.getElementById("scrollbox");
                         var row = table.insertRow(i);
                         var cell1 = row.insertCell(0);
@@ -230,7 +228,7 @@ var firebaseConfig = {
                         i = i + 1;
                     }
                     if(searchFirstName.toLowerCase() === nameyear[0].toLowerCase() && searchLastName.toLowerCase() === nameyear[1].toLowerCase() && searchyearofpass === ""){
-                        
+
                         var table = document.getElementById("scrollbox");
                         var row = table.insertRow(i);
                         var cell1 = row.insertCell(0);
@@ -248,10 +246,10 @@ var firebaseConfig = {
                         cell3.innerHTML = nameyear[3];
                         cell4.innerHTML = nameyear[4];
                         i = i + 1;
-                        
+
                     }
                     if(searchFirstName === "" && searchLastName === "" && searchyearofpass.toLowerCase() === nameyear[2].toLowerCase()){
-                        
+
                         var table = document.getElementById("scrollbox");
                         var row = table.insertRow(i);
                         var cell1 = row.insertCell(0);
@@ -269,10 +267,10 @@ var firebaseConfig = {
                         cell3.innerHTML = nameyear[3];
                         cell4.innerHTML = nameyear[4];
                         i = i + 1;
-                        
+
                     }
                     if(searchFirstName === "" && searchLastName === nameyear[1].toLowerCase() && searchyearofpass === nameyear[2].toLowerCase()){
-                        
+
                         var table = document.getElementById("scrollbox");
                         var row = table.insertRow(i);
                         var cell1 = row.insertCell(0);
@@ -290,10 +288,10 @@ var firebaseConfig = {
                         cell3.innerHTML = nameyear[3];
                         cell4.innerHTML = nameyear[4];
                         i = i + 1;
-                        
+
                     }
                     if(searchFirstName.toLowerCase() === nameyear[0].toLowerCase() && searchLastName === "" && searchyearofpass === nameyear[2].toLowerCase()){
-                        
+
                         var table = document.getElementById("scrollbox");
                         var row = table.insertRow(i);
                         var cell1 = row.insertCell(0);
