@@ -40,7 +40,32 @@ var firebaseConfig = {
             var userID = firebase.auth().currentUser.uid;
             firebase.database().ref('Users/' + userID).once('value').then(function(snapshot){
                 if(snapshot.val()){
-                    window.location.href = "MainPage.html";
+                    var userRef = firebase.database().ref().child("Users").child(userID);
+                    //window.alert('ok');
+                    userRef.on('value',(snap)=>{
+                        var data = snapshot.val();
+                        data = Object.values(data);
+                        elements = data.length;
+                        if(elements === 11){
+                        window.location.href = "MainPage.html";
+                    }else{
+                        var dob = prompt("Please enter your Date Of Birth : ");
+                            if(dob != null && dob != ""){
+                                userRef.child('zzzdob').set(dob, function(error){
+                                    if(error){
+                                        var errorCode = error.code;
+                                        var errorMessage = error.message;
+                                        console.log(errorCode);
+                                        window.alert("Message : "+ errorMessage);
+
+                                    }else{
+                                        window.location.href = "MainPage.html";
+                                }
+                                });
+                            }
+                    }
+                      });
+
 
                 }else{
                     window.location.href = "accountSettings.html";
@@ -81,7 +106,7 @@ var firebaseConfig = {
 
     console.log("before triggered");
 
-    if(FirstName!= ""  && LastName!= "" && presentorg != "" && desig != "" && phnnumber != "" && yearofpass !="" && newpass!="" && dob!=""){
+    if(FirstName!= ""  && LastName!= "" && presentorg != "" && desig != "" && phnnumber != "" && yearofpass !="" && newpass!="" &&  dob!=""){
 
         var imgurl;
         //const metadata = { contentType: 'image/jpeg' }; // or whatever you want
@@ -173,8 +198,6 @@ var firebaseConfig = {
             });*/
 
             window.alert("Fill up all fields.");
-
-
 
     }} else{
         window.alert("Fill up all fields.");
