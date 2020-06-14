@@ -468,6 +468,91 @@ var firebaseConfig = {
         
   });
 
+  $('#btn-edit').click(function(){
+    var firstnameinput =$('#FirstName').val();
+    var secondnameinput = $('#SecondName').val();
+    var yearofpassinput = $('#yearofpass').val();
+    var phnnumberinput = $('#phnnumber').val();
+    var dobinput = $('#dob').val();
+    var desiginput = $('#desig').val();
+    var presentorginput = $('#presentorg').val();
+    var furthereduinput = $('#furtheredu').val();
+    var errortext = document.getElementById('errortext');
+    //var passinput = $('#newpass').val();
+    //var email = firebase.auth().currentUser && firebase.auth().currentUser.email;
+    //console.log(firstnameinput,secondnameinput,yearofpassinput,phnnumberinput,dobinput,desiginput,presentorginput,furthereduinput, passinput);
+    /*var userData= {
+        "First Name":firstnameinput,
+        "Last Name":secondnameinput,
+        "Email": email,
+        "Year of Pass": yearofpassinput,
+        "Phone Number": phnnumberinput,
+        "Present Organisation": presentorginput,
+        "Designation": desiginput,
+        "Further Education": furthereduinput,
+        "zzNew Password": passinput,
+        "zzzDOB": dobinput
+
+
+    };*/
+
+    
+
+        if(phnnumberinput != "" && phnnumberinput != "" && desiginput!= "" && presentorginput != "" && dobinput != ""){
+            var rootRef = firebase.database().ref().child("Users");
+            var userID = firebase.auth().currentUser.uid;
+            var usersRef = rootRef.child(userID);
+
+
+    
+        usersRef.child("Phone Number").set(phnnumberinput, function(error){
+                if(error){
+                    var errorCode = error.code;
+                    var errorMessage = error.message;
+                    console.log(errorCode);
+                    window.alert("Message : "+ errorMessage);
+                }
+        });
+        usersRef.child("Present Organisation").set(presentorginput, function(error){
+            if(error){
+                var errorCode = error.code;
+                var errorMessage = error.message;
+                console.log(errorCode);
+                window.alert("Message : "+ errorMessage);
+            }
+        });
+        usersRef.child("Designation").set(desiginput, function(error){
+            if(error){
+                var errorCode = error.code;
+                var errorMessage = error.message;
+                console.log(errorCode);
+                window.alert("Message : "+ errorMessage);
+            }
+        });
+        usersRef.child("Further Education").set(furthereduinput, function(error){
+            if(error){
+                var errorCode = error.code;
+                var errorMessage = error.message;
+                console.log(errorCode);
+                window.alert("Message : "+ errorMessage);
+            }
+        });
+        
+        usersRef.child("zzzDOB").set(dobinput, function(error){
+            if(error){
+                var errorCode = error.code;
+                var errorMessage = error.message;
+                console.log(errorCode);
+                window.alert("Message : "+ errorMessage);
+            }
+        });
+        errortext.innerHTML = "";
+           }else{
+               errortext.innerHTML = "Please fill up all red fields.";
+           }
+
+});
+
 
 
   

@@ -13,6 +13,9 @@ body {
 }
 
 
+
+
+
 button {
     border: none;
     width: 164px;
@@ -104,7 +107,7 @@ button {
 
       nav {
         padding: 24px;
-        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+        
 
       }
 
