@@ -1,58 +1,69 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Updates</title>
 
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+    <title>Updates</title>
 
-        <link rel="stylesheet" href="css/material-design-iconic-font/css/material-design-iconic-font.min.css">
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
-        <!--FireBase Dependencies -->
-        <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-database.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-storage.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <!--Local CSSS-->
-        <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/material-design-iconic-font/css/material-design-iconic-font.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+    <!--FireBase Dependencies -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
 
-        <!--Boostrap-->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    </head>
+    <!--Local CSSS-->
+    <link rel="stylesheet" href="css/style.css">
 
-    <body>
-        <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
-            
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <!--Boostrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
               <span class="navbar-toggler-icon"></span>
             </button>
 
-            
-            <div class="collapse navbar-collapse" id="collapsibleNavbar">
-              <ul class="navbar-nav">
-                <a href="MainPage.html" style="color: white; margin-left: 20px;margin-top: 5px;">Home</a>
-                <a  href="updates.html" style="color: white;  margin-left: 20px;margin-top: 5px;" ><p>Updates</p></a>
-                <a href="discussion.html" style="color: white;  margin-left: 20px;margin-top: 5px;"><p>Discussion</p></a>
-                <a href="MemberDirectory.html" style="color: white;  margin-left: 20px;margin-top: 5px;"><p>Member Directory</p></a>
-                <a  href="jobposting.html" style="color: white;  margin-left: 20px;margin-top: 5px;"><p>Job/Internship/Training Posting</p></a>
-                <a href = "editprofile.html" style="color: white;  margin-left: 20px;margin-top: 5px;"><p>Edit Profile</p></a>
-              </ul>
 
-              <ul class="navbar-nav ml-auto">
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <a href="MainPage.html" style="color: white; margin-left: 20px;margin-top: 5px;">Home</a>
+                <a href="updates.html" style="color: white;  margin-left: 20px;margin-top: 5px;">
+                    <p>Updates</p>
+                </a>
+                <a href="discussion.html" style="color: white;  margin-left: 20px;margin-top: 5px;">
+                    <p>Discussion</p>
+                </a>
+                <a href="MemberDirectory.html" style="color: white;  margin-left: 20px;margin-top: 5px;">
+                    <p>Member Directory</p>
+                </a>
+                <a href="jobposting.html" style="color: white;  margin-left: 20px;margin-top: 5px;">
+                    <p>Job/Internship/Training Posting</p>
+                </a>
+                <a href="editprofile.html" style="color: white;  margin-left: 20px;margin-top: 5px;">
+                    <p>Edit Profile</p>
+                </a>
+            </ul>
+
+            <ul class="navbar-nav ml-auto">
                 <button id="btn-logout" type="button">Log Out
                     <i class="zmdi zmdi-arrow-right"></i>
                 </button>
-              </ul>
-            </div>
-        </nav>
+            </ul>
+        </div>
+    </nav>
 
-        <div class="container" style="background: white; margin-top: 60px; margin-bottom: 60px; border-radius: 10px;">
+    <div class="container" style="background: white; margin-top: 60px; margin-bottom: 60px; border-radius: 10px;">
 
-            <h1 style = "text-align: center;">Edit Profile</h1>
-            <form action="" style = "margin-top:150px;">
-                    <div class = "row">
-                        <!---<div class = "col-sm-6">
+        <h1 style="text-align: center;">Edit Profile</h1>
+        <form action="" style="margin-top:150px;">
+            <div class="row">
+                <!---<div class = "col-sm-6">
                             <p >Enter First Name : </p>
 
                         </div>
@@ -80,126 +91,126 @@
                             <input id="yearofpass" type="text" placeholder="Year Of Passing" class="form-control" style="margin-top: 1px;">
 
                         </div>-->
-                        <div class = "col-sm-3">
+                <div class="col-sm-3">
 
-                            <p style="color:red">Phone Number : </p>
-                        </div>
-                        <div class = "col-sm-9">
+                    <p style="color:red">Phone Number : </p>
+                </div>
+                <div class="col-sm-9">
 
-                            <input id="phnnumber" type="text" placeholder="Phone Number" class="form-control" style="margin-top: 1px;">
+                    <input id="phnnumber" type="text" placeholder="Phone Number" class="form-control" style="margin-top: 1px;">
 
-                        </div>
-                        <div class = "col-sm-3">
+                </div>
+                <div class="col-sm-3">
 
-                            <p style="color:red">Date of Birth : </p>
+                    <p style="color:red">Date of Birth : </p>
 
-                        </div>
-                        <div class = "col-sm-9">
+                </div>
+                <div class="col-sm-9">
 
-                            <input id="dob" type="date" class="form-control" style="margin-top: 1px;">
+                    <input id="dob" type="date" class="form-control" style="margin-top: 1px;">
 
-                        </div>
-                        <div class = "col-sm-3">
+                </div>
+                <div class="col-sm-3">
 
-                            <p style="color:red">Present Organisation : </p>
+                    <p style="color:red">Present Organisation : </p>
 
-                        </div>
-                        <div class = "col-sm-9">
+                </div>
+                <div class="col-sm-9">
 
-                            <input id="presentorg" type="text" placeholder="Present Organisation" class="form-control" style="margin-top: 1px;">
+                    <input id="presentorg" type="text" placeholder="Present Organisation" class="form-control" style="margin-top: 1px;">
 
-                        </div>
-                        <div class = "col-sm-3">
+                </div>
+                <div class="col-sm-3">
 
-                            <p style="color:red">Designation : </p>
+                    <p style="color:red">Designation : </p>
 
-                        </div>
-                        <div class = "col-sm-9">
+                </div>
+                <div class="col-sm-9">
 
-                            <input id="desig" type="text" placeholder="Designation" class="form-control" style="margin-top: 1px;">
+                    <input id="desig" type="text" placeholder="Designation" class="form-control" style="margin-top: 1px;">
 
-                        </div>
-                        <div class = "col-sm-3">
+                </div>
+                <div class="col-sm-3">
 
-                            <p >Further Education : </p>
+                    <p>Further Education : </p>
 
-                        </div>
-                        <div class = "col-sm-9">
+                </div>
+                <div class="col-sm-9">
 
-                            <input id="furtheredu" type="text" placeholder="Further Education" class="form-control" style="margin-top: 1px;">
+                    <input id="furtheredu" type="text" placeholder="Further Education" class="form-control" style="margin-top: 1px;">
 
-                        </div>
-                        
-                    </div>
+                </div>
 
-                    <p id = "errortext" style= "color:red;"></p>
+            </div>
 
-                    <button id="btn-edit" class="btn btn-outline-secondary" type="button" style = " margin-bottom: 200px; margin-top: 10px;">Update
+            <p id="errortext" style="color:red;"></p>
+
+            <button id="btn-edit" class="btn btn-outline-secondary" type="button" style=" margin-bottom: 120px; margin-top: 10px;">Update
                         <i class="zmdi zmdi-arrow-right"></i>
-                    </button> 
-                    
-                
-            </form>
+                    </button>
 
-            
 
+        </form>
+
+
+
+    </div>
+
+    <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
+        <div class="container text-center">
+            <p style="font-size:1.85rem">Brought to you by SM&PR Group</p>
+            <p style="font-size:1.15rem">Managed by Web Development Team, SM&PR Group</p>
         </div>
+    </footer>
 
-        <footer id="sticky-footer" class="py-4 bg-dark text-white-50" >
-          <div class="container text-center">
-              <p style="font-size:1.85rem">Brought to you by SM&PR Group</p>
-              <p style="font-size:1.15rem">Managed by Web Development Team, SM&PR Group</p>
-          </div>
-      </footer>
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" integrity="sha256-qM7QTJSlvtPSxVRjVWNM2OfTAz/3k5ovHOKmKXuYMO4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" integrity="sha256-qM7QTJSlvtPSxVRjVWNM2OfTAz/3k5ovHOKmKXuYMO4=" crossorigin="anonymous"></script>
 
 
-        <script src="js/index.js"></script>
+    <script src="js/index.js"></script>
 
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
-        <script>
-          firebase.auth().onAuthStateChanged(function(user){
-                if(!user)
-                {
-                    window.location.href = "index.html";
-                }else{
-                    var userID = firebase.auth().currentUser.uid;
+    <script>
+        firebase.auth().onAuthStateChanged(function(user) {
+            if (!user) {
+                window.location.href = "index.html";
+            } else {
+                var userID = firebase.auth().currentUser.uid;
 
-                    firebase.database().ref('Users/'+ userID ).on('value',(snap)=>{
-                        var data = snap.val();
-                        var userdata = Object.values(data); 
-                        if(userdata[8]!=" "){
-                            var imagurl = userdata[8];
+                firebase.database().ref('Users/' + userID).on('value', (snap) => {
+                    var data = snap.val();
+                    var userdata = Object.values(data);
+                    if (userdata[8] != " ") {
+                        var imagurl = userdata[8];
 
-                        }else{
-                            var imagurl = "images/imagelessuser.png";
-                        }
-                        //console.log(userdata);
+                    } else {
+                        var imagurl = "images/imagelessuser.png";
+                    }
+                    //console.log(userdata);
 
-                        var phnnumberinput = document.getElementById('phnnumber');
-                        var dobinput = document.getElementById('dob');
-                        var desiginput = document.getElementById('desig');
-                        var presentorginput = document.getElementById('presentorg');
-                        var furthereduinput = document.getElementById('furtheredu');
+                    var phnnumberinput = document.getElementById('phnnumber');
+                    var dobinput = document.getElementById('dob');
+                    var desiginput = document.getElementById('desig');
+                    var presentorginput = document.getElementById('presentorg');
+                    var furthereduinput = document.getElementById('furtheredu');
 
-                        phnnumberinput.value = userdata[5];
-                        dobinput.value = userdata[10];
-                        presentorginput.value = userdata[6];
-                        desiginput.value = userdata[0];
-                        furthereduinput.value = userdata[3];
-                        
-                        
+                    phnnumberinput.value = userdata[5];
+                    dobinput.value = userdata[10];
+                    presentorginput.value = userdata[6];
+                    desiginput.value = userdata[0];
+                    furthereduinput.value = userdata[3];
 
 
-                    });
-                }
-            });
-      </script>
-  
-  
-    </body>
+
+
+                });
+            }
+        });
+    </script>
+
+
+</body>
+
 </html>

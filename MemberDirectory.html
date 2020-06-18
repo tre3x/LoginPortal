@@ -1,131 +1,138 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>HOME</title>
 
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+    <title>HOME</title>
 
-        <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <link rel="stylesheet" href="css/material-design-iconic-font/css/material-design-iconic-font.min.css">
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
-        <!--FireBase Dependencies -->
-        <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-database.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-storage.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
 
-        <!--Local CSSS-->
-        <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/material-design-iconic-font/css/material-design-iconic-font.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+    <!--FireBase Dependencies -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
 
-        <!--Boostrap-->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    </head>
+    <!--Local CSSS-->
+    <link rel="stylesheet" href="css/style.css">
 
-    <body>
+    <!--Boostrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
 
-
-        
+<body>
 
 
 
-        <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
-            <!-- Toggler/collapsibe Button -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+
+
+
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
               <span class="navbar-toggler-icon"></span>
             </button>
-          
-            <!-- Navbar links -->
-            <div class="collapse navbar-collapse" id="collapsibleNavbar">
-              <ul class="navbar-nav">
-                <a href="MainPage.html" style="color: white; margin-left: 20px;margin-top: 5px;">Home</a>
-                <a  href="updates.html" style="color: white;  margin-left: 20px;margin-top: 5px;" ><p>Updates</p></a>
-                <a href="discussion.html" style="color: white;  margin-left: 20px;margin-top: 5px;"><p>Discussion</p></a>
-                <a href="MemberDirectory.html" style="color: white;  margin-left: 20px;margin-top: 5px;"><p>Member Directory</p></a>
-                <a  href="jobposting.html" style="color: white;  margin-left: 20px;margin-top: 5px;"><p>Job/Internship/Training Posting</p></a>
-                <a href = "editprofile.html" style="color: white;  margin-left: 20px;margin-top: 5px;"><p>Edit Profile</p></a>
-              </ul>
 
-              <ul class="navbar-nav ml-auto">
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <a href="MainPage.html" style="color: white; margin-left: 20px;margin-top: 5px;">Home</a>
+                <a href="updates.html" style="color: white;  margin-left: 20px;margin-top: 5px;">
+                    <p>Updates</p>
+                </a>
+                <a href="discussion.html" style="color: white;  margin-left: 20px;margin-top: 5px;">
+                    <p>Discussion</p>
+                </a>
+                <a href="MemberDirectory.html" style="color: white;  margin-left: 20px;margin-top: 5px;">
+                    <p>Member Directory</p>
+                </a>
+                <a href="jobposting.html" style="color: white;  margin-left: 20px;margin-top: 5px;">
+                    <p>Job/Internship/Training Posting</p>
+                </a>
+                <a href="editprofile.html" style="color: white;  margin-left: 20px;margin-top: 5px;">
+                    <p>Edit Profile</p>
+                </a>
+            </ul>
+
+            <ul class="navbar-nav ml-auto">
                 <button id="btn-logout" type="button">Log Out
                     <i class="zmdi zmdi-arrow-right"></i>
                 </button>
-              </ul>
-            </div>
-          </nav>
+            </ul>
+        </div>
+    </nav>
 
 
 
-        <div class="container" style="background: white; margin-top: 120px; margin-bottom: 120px; border-radius: 10px;height: 750px;">
-            <div class = "row">
+    <div class="container" style="background: white; margin-top: 120px; margin-bottom: 120px; border-radius: 10px;height: 750px;">
+        <div class="row">
 
-               <h2 style = "text-align: center; width:100%;font-family: 'Merriweather', serif;margin-top: 10px;"><u>DIRECTORY</u></h2>
-                    <form action="" style = "width:100%;text-align: center;">
-                        <div class="form-wrapper" style="margin-top: 10px; margin-left: 20px;">
-                            <p>Enter First Name :  <i><svg class="bi bi-star-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                              </svg></i></p>
-                            <input id="searchFirstName" type="email" placeholder="Enter First Name" class="form-control" style = "width : 50%; margin-left:25%">
-                        </div>
-                        <div class="form-wrapper" style="margin-top: 10px; margin-left: 20px;">
-                            <p>Enter Second Name : </p>
-                            <input id="searchSecondName" type="text" placeholder="Enter Last Name" class="form-control" style = "width : 50%;margin-left:25%">
-                        </div>
-                        <div class="form-wrapper" style="margin-top: 10px; margin-left: 20px;">
-                            <p>Enter Year of Pass : <i><svg class="bi bi-star-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                              </svg></i></p>
-                            <input id="searchyearofpass" type="text" placeholder="Enter Year Of Passing" class="form-control" style = "width : 50%;margin-left:25%">
-                        </div>
-                        <div class="form-group container-login100-form-btn"></div>
-                            <button id="btn-submit" type="button" class="btn btn-outline-dark"  style="margin-top: 20px; margin-left: 1.5%;">Submit
-                            </button> 
-                        </div>
-    
-                    </form>
-                
-                    <div class="displaybox" style="width:100%;height: 300px;line-height:3em;overflow:scroll; margin-top: 20px;overflow-x : hidden;">
-                        <table id ="scrollbox" style="width:100%;">
-                            <tr>
-                                <td style="text-align: center;">Name</td>
-                                <td style="text-align: center;">YearOfPassing</td>
-                                <td style="text-align: center;">Email</td>
-                                <td style="text-align: center;">Present Organisation</td>
-                                <td style="text-align: center;">Photo</td>
-                            </tr>
-                        </table>
-                    </div>
-
-                
-            </div>
+            <h2 style="text-align: center; width:100%;font-family: 'Merriweather', serif;margin-top: 10px;"><u>DIRECTORY</u></h2>
+            <form action="" style="width:100%;text-align: center;">
+                <div class="form-wrapper" style="margin-top: 10px; margin-left: 20px;">
+                    <p style="color: red;">Enter First Name : </p>
+                    <input id="searchFirstName" type="email" placeholder="Enter First Name" class="form-control" style="width : 50%; margin-left:25%">
+                </div>
+                <div class="form-wrapper" style="margin-top: 10px; margin-left: 20px;">
+                    <p>Enter Second Name : </p>
+                    <input id="searchSecondName" type="text" placeholder="Enter Last Name" class="form-control" style="width : 50%;margin-left:25%">
+                </div>
+                <div class="form-wrapper" style="margin-top: 10px; margin-left: 20px;">
+                    <p style="color: red;">Enter Year of Pass : </p>
+                    <input id="searchyearofpass" type="text" placeholder="Enter Year Of Passing" class="form-control" style="width : 50%;margin-left:25%">
+                </div>
+                <div class="form-group container-login100-form-btn"></div>
+                <button id="btn-submit" type="button" class="btn btn-outline-dark" style="margin-top: 20px; margin-left: 1.5%;">Submit
+                            </button>
         </div>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" integrity="sha256-qM7QTJSlvtPSxVRjVWNM2OfTAz/3k5ovHOKmKXuYMO4=" crossorigin="anonymous"></script>
+        </form>
+
+        <div class="displaybox" style="width:100%;height: 300px;line-height:3em;overflow:scroll; margin-top: 20px;overflow-x : hidden;">
+            <table id="scrollbox" style="width:100%;">
+                <tr>
+                    <td style="text-align: center;">Name</td>
+                    <td style="text-align: center;">YearOfPassing</td>
+                    <td style="text-align: center;">Email</td>
+                    <td style="text-align: center;">Present Organisation</td>
+                    <td style="text-align: center;">Photo</td>
+                </tr>
+            </table>
+        </div>
 
 
-        <script src="js/index.js"></script>
+    </div>
+    </div>
 
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
-        <script>
-            firebase.auth().onAuthStateChanged(function(user){
-                if(!user)
-                {
-                    window.location.href = "index.html";
-                }
-            });
-        </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" integrity="sha256-qM7QTJSlvtPSxVRjVWNM2OfTAz/3k5ovHOKmKXuYMO4=" crossorigin="anonymous"></script>
 
 
-        <footer id="sticky-footer" class="py-4 bg-dark text-white-50" >
-            <div class="container text-center">
-                <p style="font-size:1.85rem">Brought to you by SM&PR Group</p>
-                <p style="font-size:1.15rem">Managed by Web Development Team, SM&PR Group</p>
-            </div>
-        </footer>
+    <script src="js/index.js"></script>
 
-    </body>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <script>
+        firebase.auth().onAuthStateChanged(function(user) {
+            if (!user) {
+                window.location.href = "index.html";
+            }
+        });
+    </script>
+
+
+    <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
+        <div class="container text-center">
+            <p style="font-size:1.85rem">Brought to you by SM&PR Group</p>
+            <p style="font-size:1.15rem">Managed by Web Development Team, SM&PR Group</p>
+        </div>
+    </footer>
+
+</body>
+
 </html>
